@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+message InputMessage {
+    string value = 1;
+}
+
+message OutputMessage {
+    string value = 1;
+}
+
+service ShowMessage {
+    rpc show(InputMessage) returns (OutputMessage) {}
+}
+
+service TaggingMessage {
+    rpc tag(InputMessage) returns (OutputMessage) {}
+}
+
+service TokenizeMessage {
+    rpc tokenize(InputMessage) returns (OutputMessage) {}
+}
+
+service ChunkMessage {
+    rpc chunk(InputMessage) returns (OutputMessage) {}
+}
